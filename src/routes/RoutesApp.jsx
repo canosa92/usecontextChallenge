@@ -1,19 +1,21 @@
-import { createBrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import Home from '../pages/Home';
-import MyJob from '../pages/MyJob';
 import Profile from '../pages/Profile';
-import NavBar from '../components/Navbar'
+import MyJob from '../pages/MyJob';
 
-const Router = createBrowserRouter([
-    {
-        path: '/',
-        element: <NavBar />,
-        children: [
-            { path: '/', element: <Home /> },
-            { path: '/myjob', element: <MyJob /> },
-            { path: '/profile', element: <Profile /> },
-        ]
-    }
-]);
+const RoutesApp = () => {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/myjob" element={<MyJob />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default Router;
+export default RoutesApp;
