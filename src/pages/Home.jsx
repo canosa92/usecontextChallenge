@@ -8,7 +8,8 @@ const Home = () => {
     <>
     <section className={`App ${theme}`}>
       <h1>Esta es la home</h1>
-    </section></>
+    </section>
+    </>
   );
 };
 

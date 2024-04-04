@@ -6,9 +6,9 @@ import './App.css';
 const App = () => {
   return (
     <ThemeProvider>
-      <div className="App">
+
         <Router />
-      </div>
+
     </ThemeProvider>
   );
 };
